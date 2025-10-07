@@ -1,0 +1,47 @@
+⚙️ OPTIONAL / MANUAL VALIDATION
+
+Keep only if you have processes to verify manually (not easily automated via Ansible or Goss):
+
+manual_listening_ports (2.1.22) – Requires approved service list; manual.
+
+firewalld_loopback_manual (4.2.2) – Usually fine once baseline verified.
+
+firewall_drop_unncessary_ports_manual (4.2.1) – Retain as policy but document exemption.
+
+❌ DROP / DUPLICATES / LEGACY
+
+Duplicate: repo_gpgcheck_repo and repo_gpgcheck_global (choose one).
+
+manual_listening_ports — keep only as manual policy check; don’t run in Goss.
+
+Anything referring to /etc/pam.d/system-auth and password-auth duplicates — consolidate into one test per module if your policy uses shared includes.
+
+✅ Recommended Keep Set (shortlist for RHEL 9 automation)
+
+Here’s your clean, automation-ready subset:
+
+check_user_expiry
+check_users_MIN_DAYS
+passwd_chg_past
+sugroup_etc_group
+repo_gpgcheck_global
+autofs_masked
+wireless_disabled
+cron_allow_users
+at_allow_users
+system_auth_pam_unix
+passwd_auth_pam_unix
+pam_unix_nullok_system-auth
+pam_unix_nullok_password-auth
+system_auth_faillock
+passwd_auth_faillock
+system_auth_pwhistory
+passwd_auth_pwhistory
+system_auth_authselect_modules
+passwd_auth_authselect_modules
+auditd_priv_cmds_cnf
+auditd_chacl_live
+etc_issue_config
+1.7.5
+journald_remote_config
+systemd-journal-upload.service
