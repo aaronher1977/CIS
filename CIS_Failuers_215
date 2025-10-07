@@ -1,0 +1,66 @@
+check_user_expiry: 5.4.1.1 | Ensure password expiration is configured | check_users
+
+auditd_priv_cmds_cnf: 6.3.3.6 | Ensure use of privileged commands is collected | Manual Check Required
+
+check_users_MIN_DAYS: 5.4.1.2 | Ensure minimum password days is configured | check users
+
+firewalld_loopback_manual: 4.2.2 | Ensure firewalld loopback traffic is configured | Manual Check Required
+
+manual_listening_ports: 2.1.22 | Ensure only approved services are listening on a network interface | Manual Check required
+
+repo_gpgcheck_global: 1.2.1.3 | Ensure repo_gpgcheck is globally active
+
+sshd_access_limited: 5.1.7 | Ensure SSH access is limited | config
+
+sugroup_etc_group: 5.2.7 | Ensure access to the su command is restricted
+
+auditd_chacl_live: 6.3.3.17 | Ensure successful and unsuccessful attempts to use the chacl command are recorded | running
+
+firewall_drop_unncessary_ports_manual: 4.2.1 | Ensure firewalld drops unnecessary services and ports | Manual Check Required
+
+repo_gpgcheck_repo: 1.2.1.3 | Ensure repo_gpgcheck is globally active
+
+wireless_disabled: 3.1.2 | Ensure wireless interfaces are disabled
+
+system_auth_pam_unix: /etc/pam.d/system-auth: 5.3.2.5 | Ensure pam_unix module is enabled
+
+pam_unix_nullok_system-auth: /etc/pam.d/system-auth: 5.3.3.4.1 | Ensure pam_unix does not include nullok | system-auth
+
+journald_remote_config: /etc/systemd/journal-upload.conf: 6.2.2.1.2 | Ensure systemd-journal-upload authentication is configured
+
+pam_unix_nullok_password-auth: /etc/pam.d/password-auth: 5.3.3.4.1 | Ensure pam_unix does not include nullok | password-auth
+
+system_auth_pwhistory: /etc/pam.d/system-auth: 5.3.2.4 | Ensure pam_pwhistory module is enabled
+
+pwhistory_use_authtok_password-auth: /etc/pam.d/password-auth: 5.3.3.3.3 | Ensure pam_pwhistory includes use_authtok | password-auth
+
+cron_allow_users: /etc/cron.allow: 2.4.1.8 | Ensure cron is restricted to authorized users
+
+passwd_auth_faillock: /etc/pam.d/password-auth: 5.3.2.2 | Ensure pam_faillock module is enabled
+
+passwd_auth_authselect_modules: /etc/authselect/custom/mpg_cis/password-auth: 5.3.2.1 | Ensure active authselect profile includes pam modules
+
+at_allow_users: /etc/at.allow: 2.4.2.1| Ensure at is restricted to authorized users
+
+autofs_masked: /etc/systemd/system/autofs.service: 2.1.1 | Ensure autofs services are not in use | masked
+
+system_auth_authselect_modules: /etc/authselect/custom/mpg_cis/system-auth: 5.3.2.1 | Ensure active authselect profile includes pam modules
+
+etc_issue_config: /etc/issue: 1.7.2 | Ensure local login warning banner is configured properly
+
+1.7.5 | Ensure permissions on /etc/issue are configured
+
+
+
+system_auth_faillock: /etc/pam.d/system-auth: 5.3.2.2 | Ensure pam_faillock module is enabled
+
+passwd_auth_pwhistory: /etc/pam.d/password-auth: 5.3.2.4 | Ensure pam_pwhistory module is enabled
+
+passwd_auth_pam_unix: /etc/pam.d/password-auth: 5.3.2.5 | Ensure pam_unix module is enabled
+
+systemd-journal-upload.service: 6.2.2.1.3 | Ensure systemd-journal-upload is enabled and active
+
+passwd_chg_past: 5.4.1.6 | Ensure all users last password change date is in the past
+
+passwd_chg_past: 5.4.1.6 | Ensure all users last password change date is in the past
+
