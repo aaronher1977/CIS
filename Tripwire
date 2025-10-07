@@ -1,0 +1,48 @@
+Node Name       Parent Test Group       Element Actual Value    Comments
+        1.1.3.3 Ensure noexec Option Set on /var Partition      File Systems Mounted    /var Partition with noexec Option=No Value Extracted    Standing Waiver
+        1.1.7.4 Ensure usrquota Option Set on /home Partition   File Systems Mounted    /home with usrquota Option=No Value Extracted   Standing Waiver
+        1.1.7.5 Ensure grpquota Option Set on /home Partition   File Systems Mounted    /home with grpquota Option=No Value Extracted   Standing Waiver
+        1.2.1 Ensure Red Hat Subscription Manager Connection Is Configured      MANUAL REVIEW   Red Hat Subscription Manager Connection Setting=MANUAL REVIEW   Meets Standard
+        1.2.2 Ensure GPG Keys Are Configured    MANUAL REVIEW   GPG Keys Setting=MANUAL REVIEW  Meets Standard
+        1.2.4 Ensure Package Manager Repositories Are Configured        MANUAL REVIEW   Package Manager Repositories Setting=MANUAL REVIEW      Meets Standard
+        1.3.1 Ensure AIDE Is Installed  installed packages      aide Package=No Value Extracted Standing Waiver
+        1.6.1.6 Ensure No Unconfined Services Exist     Get Unconfined Daemons  Unconfined Daemons=system_u:system_r:unconfined_service_t:s0 1378 ? 14:30:28 sisamddaemonsystem_u:system_r:unconfined_service_t:s0 1969 ? 00:17:50 cafservicemainsystem_u:system_r:unconfined_service_t:s0 2270 ? 01:36:00 sisidsdaemonsystem_u:system_r:unconfined_service_t:s0 2516 ? 01:12:26 sisipsdaemonsystem_u:system_r:unconfined_service_t:s0 2552 ? 00:00:00 sisipsutildaemosystem_u:system_r:unconfined_service_t:s0 437117 ? 00:00:00 stagentlistenersystem_u:system_r:unconfined_service_t:s0 1667204 ? 00:01:56 dynatracegatewasystem_u:system_r:unconfined_service_t:s0 1667208 ? 07:02:33 javasystem_u:system_r:unconfined_service_t:s0 3287969 ? 00:01:19 vucwrappersystem_u:system_r:unconfined_service_t:s0 3288018 ? 01:30:01 javasystem_u:system_r:unconfined_service_t:s0 3288317 ? 00:24:31 javasystem_u:system_r:unconfined_service_t:s0 3320532 ? 01:12:38 splunkdsystem_u:system_r:unconfined_service_t:s0 3320534 ? 00:00:00 splunkdsystem_u:system_r:unconfined_service_t:s0 3675386 ? 00:12:23 stagentdsystem_u:system_r:unconfined_service_t:s0 3750631 ? 00:00:00 sleep        Standing Waiver
+        1.8.4 Ensure XDMCP Is Not Enabled       /etc/gdm/custom.conf            Meets Standard
+        2.2. 2 Ensure Xorg-x11-server-common Is Not Installed   installed packages      X Windows Package=xorg-x11-server-common-1.20.11-25.el8_10.x86_64       WAIVER NEEDED
+        2.2.3.2 Verify That avahi Is Not Installed      installed packages      avahi Setting=avahi-0.7-27.el8_10.1.x86_64      WAIVER NEEDED
+        2.4 Ensure Nonessential Services Are Removed or Masked  MANUAL REVIEW   Nonessential Services Setting=MANUAL REVIEW     Meets Standard
+        3.1.1 Verify if IPv6 Is Enabled on the System   Check IPv6 Status       GPG Keys Setting=MANUAL REVIEW  Standing Waiver
+        3.4.1.6 Ensure Network Interfaces Are Assigned to Appropriate Zone      MANUAL REVIEW   Network Interfaces Setting=MANUAL REVIEW        Meets Standard
+        3.4.1.7 Ensure firewalld Drops Unnecessary Services and Ports   MANUAL REVIEW   Unnecessary Services and Ports Setting=MANUAL REVIEW    Meets Standard
+        3.4.2. 2 Ensure firewalld Is Either Not Installed or Masked with nftables       firewalld Status        firewalld Status=No Value Extracted     Meets Standard
+        3.4.2. 4 Ensure iptables Are Flushed with nftables      MANUAL REVIEW   iptables Setting=MANUAL REVIEW  Meets Standard
+        3.4.2.7.1 Verify That the Loopback Interface Is Configured to Accept Traffic    List of nft Ruleset     Accept Traffic Rule=No Value Extracted  Meets Standard
+        3.4.2.7.2 Verify That All Other Interfaces Are Configured to Deny Traffic to the Loopback Network (ipv4)        List of nft Ruleset     Deny Traffic to Loopback Network Rule=No Value Extracted     Meets Standard
+        3.4.2.7.3 Verify That All Other Interfaces Are Configured to Deny Traffic to the Loopback Network (ipv6)        List of nft Ruleset (ipv6)      Deny Traffic to Loopback Network Rule=No Value Extracted     Meets Standard
+        3.4.2. 8 Ensure nftables Outbound and Established Connections Are Configured    MANUAL REVIEW   iptables Setting=MANUAL REVIEW  Meets Standard
+        3.4.2.9.1 Verify the Policy for the INPUT Hook  List of nft Ruleset     DROP Policy=No Value Extracted  Meets Standard
+        3.4.2.9.2 Verify the Policy for the OUTPUT Hook List of nft Ruleset     DROP Policy=No Value Extracted  Meets Standard
+        3.4.2.9.3 Verify the Policy for the FORWARD Hook        List of nft Ruleset     DROP Policy=No Value Extracted  Meets Standard
+        3.4.2.10 Ensure nftables Service Is Enabled     Service Status  nftables Service=masked Meets Standard
+        3.4.2.11. 1 Verify That the Loopback Interface Is Configured to Accept Traffic on Boot  List Base Chain Accept Traffic Rule=No Value Extracted  Meets Standard
+        3.4.2.11. 2 Verify That All Other Interfaces Are Configured to Deny Traffic to the Loopback Network on Boot (ipv4)      List Base Chain Deny Traffic to Loopback Network Rule=No Value Extracted     Meets Standard
+        3.4.2.11. 3 Verify That All Other Interfaces Are Configured to Deny Traffic to the Loopback Network on Boot (ipv6)      List Base Chain Deny Traffic to Loopback Network Rule=No Value Extracted     Meets Standard
+        3.4.2.11. 4 Verify That Established Connections Are Configured for tcp Protocol List Base Chain Established Connections Configuration=No Value Extracted        Meets Standard
+        3.4.2.11. 5 Verify That Established Connections Are Configured for udp Protocol List Base Chain Established Connections Configuration=No Value Extracted        Meets Standard
+        3.4.2.11. 6 Verify That Established Connections Are Configured for icmp Protocol        List Base Chain Established Connections Configuration=No Value Extracted        Meets Standard
+        3.4.2.11. 7 Verify That Port 22(SSH) Is Accepted from Anywhere  List Base Chain Accept port 22(SSH) Setting=No Value Extracted  Meets Standard
+        3.4.2.11. 8 Verify That ICMP and IGMP Accepted from Anywhere    List Base Chain Rule to Accept ICMP And IGMP=No Value Extracted Meets Standard
+        3.4.2.11. 9 Verify Base Chains for FORWARD on Boot      List Base Chain Forward Base Chain=No Value Extracted   Meets Standard
+        3.4.2.11.10 Verify That Outbound And Established Connections Are Configured for tcp     List Base Chain Established Connections Rule=No Value Extracted Meets Standard
+        3.4.2.11.11 Verify That Outbound And Established Connections Are Configured for udp     List Base Chain Established Connections Rule=No Value Extracted Meets Standard
+        3.4.2.11.12 Verify That Outbound And Established Connections Are Configured for icmp    List Base Chain Established Connections Rule=No Value Extracted Meets Standard
+        3.4.3.1.1.2 Verify That iptables-services Package Is Installed  installed packages      iptables-services Package=No Value Extracted    Meets Standard
+        3.4.3.1.2 Ensure Nftables Is Not Installed with iptables        installed packages      nftables Package=nftables-1.0.4-4.el8_9.x86_64  Meets Standard
+        3.4.3.1.3 Ensure Firewalld Is Either Not Installed or Masked with iptables      firewalld Status        firewalld Status=No Value Extracted     Meets Standard
+        3.4.3.2.1.1 Verify That All Interfaces Are Configured to Deny Traffic to the Loopback Network   Get Firewall Rules      Deny Traffic Rule=No Value Extracted    Meets Standard
+        3.4.3.2.1.2 Verify That the loopback Interface Is Configured to Accept Input Traffic    Get Firewall Rules      Accept Traffic Rule=No Value Extracted  Meets Standard
+        3.4.3.2.2 Ensure iptables Outbound and Established Connections Are Configured   MANUAL REVIEW   Outbound and Established Connections Setting=MANUAL REVIEW      Meets Standard
+        3.4.3.2.3 Ensure iptables Rules Exist for All Open Ports        Firewall Rules  Firewall Rules=Invalid setting: The open port tcp 22 does not have any firewall ruleInvalid setting: The open port tcp 4155 does not have any firewall rule  Meets Standard
+        3.4.3.2.4.1 Verify That Input Packages Are Dropped by Default for IPv4 (Configuration State)    /etc/sysconfig/iptables         Meets Standard
+        3.4.3.2.4.2 Verify That Output Packages Are Dropped by Default for IPv4 (Configuration State)   /etc/sysconfig/iptables         Meets Standard
+        3.4.3.2.4.3 Verify That Forward Packages Are Dropped by Default for IPv4 (Configuration State)  /etc/sysconfig/iptables         Meets Standard
